@@ -1,7 +1,6 @@
 package amerebagatelle.github.io.discordconnect.mixin;
 
 import amerebagatelle.github.io.discordconnect.Bot;
-import amerebagatelle.github.io.discordconnect.DiscordConnect;
 import net.minecraft.server.PlayerManager;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;

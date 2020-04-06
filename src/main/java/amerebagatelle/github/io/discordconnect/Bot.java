@@ -5,15 +5,12 @@ import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.entities.Guild;
-import net.dv8tion.jda.core.entities.MessageChannel;
 import net.dv8tion.jda.core.entities.TextChannel;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.text.LiteralText;
-
-import javax.security.auth.login.LoginException;
 
 public class Bot extends ListenerAdapter {
     private MinecraftServer mcs;
@@ -52,7 +49,8 @@ public class Bot extends ListenerAdapter {
             // * !online command
             if(eventMessage.contains("!online")) {
                 String[] playerList = mcs.getPlayerManager().getPlayerNames();
-                StringBuffer sb = new StringBuffer();
+                StringBuffer sb;
+                sb = new StringBuffer();
                 for (String s : playerList) {
                     sb.append(s).append("\n");
                 }
