@@ -25,6 +25,7 @@ dependencies {
     modCompile "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     compile "net.dv8tion:JDA:3.5.0_329"
+    include "net.dv8tion:JDA:3.5.0_329"
 }
 
 processResources {

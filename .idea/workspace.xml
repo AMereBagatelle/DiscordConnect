@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4262e55c-e62c-4494-a711-301c17367f29" name="Default Changelist" comment="" />
+    <list default="true" id="4262e55c-e62c-4494-a711-301c17367f29" name="Default Changelist" comment="Created SettingsManager.java to hide bot token and refactored all other classes to use it">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/amerebagatelle/github/io/discordconnect/settings/SettingsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.5.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.5.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.5.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.5.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.5.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/amerebagatelle/github/io/discordconnect/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/amerebagatelle/github/io/discordconnect/Bot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/amerebagatelle/github/io/discordconnect/DiscordConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/amerebagatelle/github/io/discordconnect/DiscordConnect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2020-04-06-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2020-04-06-1.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2020-04-06-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2020-04-06-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2020-04-06-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2020-04-06-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2020-04-06-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2020-04-06-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2020-04-06-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2020-04-06-5.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2020-04-06-6.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2020-04-06-6.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2020-04-06-7.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2020-04-06-7.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/DIM-1/data/raids_nether.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/DIM-1/data/raids_nether.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/DIM1/data/raids_end.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/amerebagatelle/github/io/discordconnect/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/amerebagatelle/github/io/discordconnect/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/amerebagatelle/github/io/discordconnect/DiscordConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/amerebagatelle/github/io/discordconnect/DiscordConnect.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -34,15 +75,23 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1a8tvH3qCCKPglb7RPcQ82XeAAb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="JavaMethodFindUsagesOptions.isImplementingMethods" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SlimeChunkFind" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
@@ -87,7 +136,15 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created SettingsManager.java to hide bot token and refactored all other classes to use it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created SettingsManager.java to hide bot token and refactored all other classes to use it" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="139" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1586189190913">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="413" y="139" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586189190913" />
     <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586187316989">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -101,54 +158,62 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="457" y="75" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586171712745" />
+    <state x="184" y="0" key="CommitChangelistDialog2" timestamp="1586191216486">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="0" key="CommitChangelistDialog2/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586191216486" />
     <state x="462" y="126" key="FileChooserDialogImpl" timestamp="1586130284397">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="462" y="126" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1586130284397" />
-    <state width="1322" height="238" key="GridCell.Tab.0.bottom" timestamp="1586188708122">
+    <state width="1322" height="180" key="GridCell.Tab.0.bottom" timestamp="1586191216635">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="238" key="GridCell.Tab.0.bottom/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="180" key="GridCell.Tab.0.bottom/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586191216635" />
     <state width="1322" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586133808439" />
-    <state width="1322" height="238" key="GridCell.Tab.0.center" timestamp="1586188708122">
+    <state width="1322" height="180" key="GridCell.Tab.0.center" timestamp="1586191216634">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="238" key="GridCell.Tab.0.center/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="180" key="GridCell.Tab.0.center/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586191216634" />
     <state width="1322" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1586133808439" />
-    <state width="1322" height="238" key="GridCell.Tab.0.left" timestamp="1586188708122">
+    <state width="1322" height="180" key="GridCell.Tab.0.left" timestamp="1586191216634">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="238" key="GridCell.Tab.0.left/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="180" key="GridCell.Tab.0.left/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586191216634" />
     <state width="1322" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1586133808438" />
-    <state width="1322" height="238" key="GridCell.Tab.0.right" timestamp="1586188708122">
+    <state width="1322" height="180" key="GridCell.Tab.0.right" timestamp="1586191216634">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="238" key="GridCell.Tab.0.right/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="180" key="GridCell.Tab.0.right/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586191216634" />
     <state width="1322" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1586133808439" />
-    <state width="1322" height="238" key="GridCell.Tab.1.bottom" timestamp="1586188708122">
+    <state width="1322" height="180" key="GridCell.Tab.1.bottom" timestamp="1586191216635">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="180" key="GridCell.Tab.1.bottom/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586191216635" />
     <state width="1322" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586132988173" />
-    <state width="1322" height="238" key="GridCell.Tab.1.center" timestamp="1586188708122">
+    <state width="1322" height="180" key="GridCell.Tab.1.center" timestamp="1586191216635">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="238" key="GridCell.Tab.1.center/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="180" key="GridCell.Tab.1.center/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586191216635" />
     <state width="1322" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1586132988173" />
-    <state width="1322" height="238" key="GridCell.Tab.1.left" timestamp="1586188708122">
+    <state width="1322" height="180" key="GridCell.Tab.1.left" timestamp="1586191216635">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="238" key="GridCell.Tab.1.left/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="180" key="GridCell.Tab.1.left/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586191216635" />
     <state width="1322" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1586132988172" />
-    <state width="1322" height="238" key="GridCell.Tab.1.right" timestamp="1586188708122">
+    <state width="1322" height="180" key="GridCell.Tab.1.right" timestamp="1586191216635">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="238" key="GridCell.Tab.1.right/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="180" key="GridCell.Tab.1.right/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586191216635" />
     <state width="1322" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1586132988173" />
     <state x="379" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1586130225252">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="379" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1586130225252" />
+    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586191121306">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586191121306" />
     <state x="339" y="172" key="run.anything.popup" timestamp="1586132176230">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
