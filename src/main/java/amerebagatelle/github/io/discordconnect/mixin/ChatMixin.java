@@ -19,7 +19,9 @@ public class ChatMixin {
         if(!system) {
             Bot.sendMessage(message);
         } else {
-            Bot.sendMessage(message.replaceAll("§[4c6e2ab319d5f780lmnor]", ""));
+            if(message.contains("[Discord]")) {
+                Bot.sendMessage(message.replaceAll("§[4c6e2ab319d5f780lmnor]", ""));
+            }
         }
     }
 }
