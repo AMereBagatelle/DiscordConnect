@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "discordconnect",
+  "version": "${version}",
+  "name": "DiscordConnect",
+  "description": "Connecting discord to minecraft, with near to no hassle!",
+  "authors": [
+    "AMereBagatelle"
+  ],
+  "contact": {
+    "homepage": "AMereBagatelle.github.io",
+    "sources": "https://github.com/AMereBagatelle/DiscordConnect"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/discordconnect/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "amerebagatelle.github.io.discordconnect.DiscordConnect"
+    ]
+  },
+  "mixins": [
+    "DiscordConnect.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.7.10+build.191",
+    "fabric": "*",
+    "minecraft": "1.15.2"
+  }
+}

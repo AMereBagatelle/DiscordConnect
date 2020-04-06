@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4262e55c-e62c-4494-a711-301c17367f29" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1a8tvH3qCCKPglb7RPcQ82XeAAb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="JavaMethodFindUsagesOptions.isImplementingMethods" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SlimeChunkFind" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\Coding Projects\Modding\Minecraft\DiscordConnect\run\mods" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Minecraft Server">
+    <configuration name="DiscordConnect build" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" value="DiscordConnect build" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Minecraft Client" />
+      <item itemvalue="Application.Minecraft Server" />
+      <item itemvalue="Gradle.DiscordConnect build" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4262e55c-e62c-4494-a711-301c17367f29" name="Default Changelist" comment="" />
+      <created>1586129278013</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586129278013</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586187316989">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586187316989" />
+    <state x="488" y="93" key="#com.intellij.ide.util.MemberChooser" timestamp="1586177693696">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="488" y="93" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586177693696" />
+    <state x="488" y="93" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1586133486268" />
+    <state x="457" y="75" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1586171712745">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="457" y="75" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586171712745" />
+    <state x="462" y="126" key="FileChooserDialogImpl" timestamp="1586130284397">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="462" y="126" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1586130284397" />
+    <state width="1322" height="238" key="GridCell.Tab.0.bottom" timestamp="1586188708122">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="238" key="GridCell.Tab.0.bottom/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586133808439" />
+    <state width="1322" height="238" key="GridCell.Tab.0.center" timestamp="1586188708122">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="238" key="GridCell.Tab.0.center/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1586133808439" />
+    <state width="1322" height="238" key="GridCell.Tab.0.left" timestamp="1586188708122">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="238" key="GridCell.Tab.0.left/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1586133808438" />
+    <state width="1322" height="238" key="GridCell.Tab.0.right" timestamp="1586188708122">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="238" key="GridCell.Tab.0.right/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1586133808439" />
+    <state width="1322" height="238" key="GridCell.Tab.1.bottom" timestamp="1586188708122">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586132988173" />
+    <state width="1322" height="238" key="GridCell.Tab.1.center" timestamp="1586188708122">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="238" key="GridCell.Tab.1.center/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1586132988173" />
+    <state width="1322" height="238" key="GridCell.Tab.1.left" timestamp="1586188708122">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="238" key="GridCell.Tab.1.left/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1586132988172" />
+    <state width="1322" height="238" key="GridCell.Tab.1.right" timestamp="1586188708122">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="238" key="GridCell.Tab.1.right/0.0.1366.768/1366.0.1920.1200@0.0.1366.768" timestamp="1586188708122" />
+    <state width="1322" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1586132988173" />
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1586130225252">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1586130225252" />
+    <state x="339" y="172" key="run.anything.popup" timestamp="1586132176230">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1586132176230" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1586131905070">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1586131905070" />
+  </component>
+</project>

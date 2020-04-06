@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "amerebagatelle/github/io/discordconnect/mixin/ChatMixin": {
+      "broadcastChatMessage": "Lnet/minecraft/class_3324;method_14616(Lnet/minecraft/class_2561;Z)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "amerebagatelle/github/io/discordconnect/mixin/ChatMixin": {
+        "broadcastChatMessage": "Lnet/minecraft/class_3324;method_14616(Lnet/minecraft/class_2561;Z)V"
+      }
+    }
+  }
+}
