@@ -12,23 +12,35 @@ public class SettingsManager {
     public static String guildLinkId;
     public static String channelLinkId;
 
+    // * Settings
+    public static boolean sendToDiscord;
+    public static boolean sendToMinecraft;
+    public static boolean onlineCommand;
+
     public static void init() {
         if(!settingsFilePath.exists()) {
             try {
-                settingsFilePath.createNewFile();
+                boolean newFileCreated = settingsFilePath.createNewFile();
 
-                Properties prop = new Properties();
-                BufferedReader inputStream = new BufferedReader(new FileReader(settingsFilePath));
-                prop.load(inputStream);
-                inputStream.close();
+                if(newFileCreated) {
+                    Properties prop = new Properties();
+                    BufferedReader inputStream = new BufferedReader(new FileReader(settingsFilePath));
+                    prop.load(inputStream);
+                    inputStream.close();
 
-                BufferedWriter outputStream = new BufferedWriter(new FileWriter(settingsFilePath));
-                prop.setProperty("token", "");
-                prop.setProperty("guildId", "");
-                prop.setProperty("channelId", "");
-                prop.store(outputStream, null);
-                outputStream.flush();
-                outputStream.close();
+                    BufferedWriter outputStream = new BufferedWriter(new FileWriter(settingsFilePath));
+                    prop.setProperty("token", "");
+                    prop.setProperty("guildId", "");
+                    prop.setProperty("channelId", "");
+                    prop.setProperty("sendToDiscord", "true");
+                    prop.setProperty("sendToMinecraft", "true");
+                    prop.setProperty("onlineCommand", "true");
+                    prop.store(outputStream, null);
+                    outputStream.flush();
+                    outputStream.close();
+                } else {
+                    throw new IOException("Could not create settings file, do I have write access?");
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -49,6 +61,9 @@ public class SettingsManager {
             token = prop.getProperty("token");
             guildLinkId = prop.getProperty("guildId");
             channelLinkId = prop.getProperty("channelId");
+            sendToDiscord = Boolean.getBoolean(prop.getProperty("sendToDiscord"));
+            sendToMinecraft = Boolean.getBoolean(prop.getProperty("sendToMinecraft"));
+            onlineCommand = Boolean.getBoolean(prop.getProperty("onlineCommand"));
         } catch (IOException e) {
             e.printStackTrace();
         }
