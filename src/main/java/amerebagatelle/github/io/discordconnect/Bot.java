@@ -1,16 +1,14 @@
 package amerebagatelle.github.io.discordconnect;
 
 import amerebagatelle.github.io.discordconnect.settings.SettingsManager;
-import net.dv8tion.jda.core.AccountType;
-import net.dv8tion.jda.core.JDA;
-import net.dv8tion.jda.core.JDABuilder;
-import net.dv8tion.jda.core.entities.Guild;
-import net.dv8tion.jda.core.entities.TextChannel;
-import net.dv8tion.jda.core.events.DisconnectEvent;
-import net.dv8tion.jda.core.events.ReadyEvent;
-import net.dv8tion.jda.core.events.ShutdownEvent;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.core.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.AccountType;
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.Guild;
+import net.dv8tion.jda.api.entities.TextChannel;
+import net.dv8tion.jda.api.events.ReadyEvent;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.text.LiteralText;
@@ -27,7 +25,8 @@ public class Bot extends ListenerAdapter {
         if(SettingsManager.channelLinkId != null && SettingsManager.guildLinkId != null && SettingsManager.token != null && SettingsManager.channelLinkId.length() > 0 && SettingsManager.guildLinkId.length() > 0 && SettingsManager.token.length() > 0) {
             this.mcs = (MinecraftServer) FabricLoader.getInstance().getGameInstance();
             try {
-                builder = new JDABuilder(AccountType.BOT).setToken(SettingsManager.token).addEventListener(this).buildAsync();
+                builder = new JDABuilder(AccountType.BOT).setToken(SettingsManager.token).addEventListeners(this).build();
+                builder.awaitReady();
             } catch (Exception e) {
                 e.printStackTrace();
             }
