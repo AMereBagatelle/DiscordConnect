@@ -13,9 +13,9 @@ public class SettingsManager {
     public static String channelLinkId;
 
     // * Settings
-    public static boolean sendToDiscord;
-    public static boolean sendToMinecraft;
-    public static boolean onlineCommand;
+    public static boolean sendToDiscord = true;
+    public static boolean sendToMinecraft = true;
+    public static boolean onlineCommand = true;
 
     public static void init() {
         if(!settingsFilePath.exists()) {
@@ -45,10 +45,10 @@ public class SettingsManager {
                 e.printStackTrace();
             }
         }
-        loadSettings();
+        loadAllSettings();
     }
 
-    public static void loadSettings() {
+    public static void loadAllSettings() {
         BufferedReader inputStream;
 
         try {
@@ -86,6 +86,6 @@ public class SettingsManager {
         outputStream.flush();
         outputStream.close();
 
-        loadSettings();
+        loadAllSettings();
     }
 }
