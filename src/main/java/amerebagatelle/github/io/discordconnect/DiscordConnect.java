@@ -10,26 +10,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class DiscordConnect implements ModInitializer {
-    public static Bot bot;
-    public static String serverStartTime;
 
     @Override
     public void onInitialize() {
-        serverStartTime = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss").format(LocalDateTime.now());
-        // This code runs on initialization, place for commands, configuration init, etc.
-        SettingsManager.init();
-        Bot bot = new Bot(serverStartTime);
-
-        ServerTickCallback.EVENT.register(e -> {
-            bot.tick();
-        });
-
-        ServerStartCallback.EVENT.register(e -> {
-            Bot.sendMessageToChatLink("Server started!");
-        });
-
-        ServerStopCallback.EVENT.register(e -> {
-           Bot.sendMessageToChatLink("Server shutting down...");
-        });
     }
 }
