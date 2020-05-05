@@ -16,17 +16,26 @@ import net.minecraft.text.LiteralText;
 import javax.security.auth.login.LoginException;
 
 public class Bot {
+    // TODO: Move this to settings
+    public String linkChannelId = "707009754723123253";
     public boolean isBotActive;
-    private static JDA bot;
+    public static JDA bot;
+    public TextChannel linkChannel;
 
     public Bot() {
         try {
             bot = JDABuilder.createDefault("NjU3OTIwNzg4MDk1MTcyNjA4.XrCl_g.T-FjANXJlo2ct_PI0InJaBVZ0zA").build();
+            bot.addEventListener(new MessageListener());
             bot.awaitReady();
+            linkChannel = bot.getTextChannelById(linkChannelId);
             isBotActive = true;
         } catch (LoginException | InterruptedException e) {
             bot = null;
             isBotActive = false;
         }
+    }
+
+    public void sendMessageToMinecraft(String message) {
+
     }
 }
