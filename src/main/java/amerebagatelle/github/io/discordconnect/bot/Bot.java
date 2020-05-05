@@ -17,14 +17,19 @@ import javax.security.auth.login.LoginException;
 
 public class Bot {
     // TODO: Move this to settings
+    public String minecraftMessagePrefix = "[SMP]";
+    // TODO: Move this to settings
+    public String discordMessagePrefix = "[Discord]";
+    // TODO: Move this to settings
     public String linkChannelId = "707009754723123253";
     public boolean isBotActive;
     public static JDA bot;
     public TextChannel linkChannel;
+    private final MinecraftServer minecraftServerInstance;
 
     public Bot() {
         try {
-            bot = JDABuilder.createDefault("NjU3OTIwNzg4MDk1MTcyNjA4.XrCl_g.T-FjANXJlo2ct_PI0InJaBVZ0zA").build();
+            bot = JDABuilder.createDefault("Njk2NTE0ODkwMzYxMzM5OTM0.XrFC4A.DXeBIIuGsq4w0bY785e3fEM24Lc").build();
             bot.addEventListener(new MessageListener());
             bot.awaitReady();
             linkChannel = bot.getTextChannelById(linkChannelId);
@@ -33,9 +38,16 @@ public class Bot {
             bot = null;
             isBotActive = false;
         }
+        minecraftServerInstance = (MinecraftServer) FabricLoader.getInstance().getGameInstance();
     }
 
     public void sendMessageToMinecraft(String message) {
+        minecraftServerInstance.getPlayerManager().sendToAll(new LiteralText(message));
+    }
 
+    public void sendMessageToDiscord(String message) {
+        if(linkChannel != null) {
+            linkChannel.sendMessage(message).queue();
+        }
     }
 }

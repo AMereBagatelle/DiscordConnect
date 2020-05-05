@@ -9,19 +9,21 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import javax.annotation.Nonnull;
 
 public class MessageListener extends ListenerAdapter {
-    // TODO: Move this to settings
-    public String messagePrefix = "[SMP]";
+
+    private String content;
 
     @Override
-    public void onGuildMessageReceived(@Nonnull GuildMessageReceivedEvent event) {
-        // Makes sure that we don't catch our own message
-        if (event.getAuthor().isBot()) return;
-
+    public void onMessageReceived(@Nonnull MessageReceivedEvent event) {
         Message message = event.getMessage();
         String content = message.getContentRaw();
 
         if(message.getChannel() == DiscordConnect.bot.linkChannel) {
-
+            if(!content.startsWith(DiscordConnect.bot.minecraftMessagePrefix)) {
+                DiscordConnect.bot.sendMessageToMinecraft(DiscordConnect.bot.minecraftMessagePrefix + " " + content);
+            }
         }
+
+        // Makes sure that we don't catch our own message
+        if (event.getAuthor().isBot()) return;
     }
 }

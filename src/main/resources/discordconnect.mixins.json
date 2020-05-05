@@ -3,6 +3,7 @@
   "package": "amerebagatelle.github.io.discordconnect.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "ChatListenerMixin"
   ],
   "client": [
   ],
