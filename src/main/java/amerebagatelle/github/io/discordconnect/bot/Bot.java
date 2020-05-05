@@ -13,10 +13,18 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.text.LiteralText;
 
-public class Bot extends ListenerAdapter {
-    private static JDA builder;
+import javax.security.auth.login.LoginException;
+
+public class Bot {
+    public boolean isBotActive;
+    private static JDA bot;
 
     public Bot() {
-
+        try {
+            bot = JDABuilder.createDefault("NjU3OTIwNzg4MDk1MTcyNjA4.XrCl_g.T-FjANXJlo2ct_PI0InJaBVZ0zA").build();
+            isBotActive = true;
+        } catch (LoginException e) {
+            isBotActive = false;
+        }
     }
 }
