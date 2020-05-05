@@ -9,8 +9,6 @@ import javax.annotation.Nonnull;
 
 public class MessageListener extends ListenerAdapter {
 
-    private String content;
-
     @Override
     public void onMessageReceived(@Nonnull MessageReceivedEvent event) {
         Message message = event.getMessage();
