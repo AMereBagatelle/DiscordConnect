@@ -22,8 +22,10 @@ public class Bot {
     public Bot() {
         try {
             bot = JDABuilder.createDefault("NjU3OTIwNzg4MDk1MTcyNjA4.XrCl_g.T-FjANXJlo2ct_PI0InJaBVZ0zA").build();
+            bot.awaitReady();
             isBotActive = true;
-        } catch (LoginException e) {
+        } catch (LoginException | InterruptedException e) {
+            bot = null;
             isBotActive = false;
         }
     }
