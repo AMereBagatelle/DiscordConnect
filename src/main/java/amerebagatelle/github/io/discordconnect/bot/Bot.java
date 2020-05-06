@@ -1,5 +1,6 @@
 package amerebagatelle.github.io.discordconnect.bot;
 
+import amerebagatelle.github.io.discordconnect.settings.SettingsManager;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.TextChannel;
@@ -23,7 +24,7 @@ public class Bot {
 
     public Bot() {
         try {
-            bot = JDABuilder.createDefault("Njk2NTE0ODkwMzYxMzM5OTM0.XrFC4A.DXeBIIuGsq4w0bY785e3fEM24Lc").build();
+            bot = JDABuilder.createDefault(SettingsManager.loadSetting("botToken")).build();
             bot.addEventListener(new ServerMessageListener());
             bot.awaitReady();
             linkChannel = bot.getTextChannelById(linkChannelId);
