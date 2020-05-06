@@ -22,7 +22,7 @@ public class Bot {
     public Bot() {
         try {
             bot = JDABuilder.createDefault(SettingsManager.loadSetting("botToken")).build();
-            bot.addEventListener(new ServerMessageListener());
+            bot.addEventListener(new ChatlinkMessageListener());
             bot.awaitReady();
             linkChannel = bot.getTextChannelById(linkChannelId);
             isBotActive = true;
