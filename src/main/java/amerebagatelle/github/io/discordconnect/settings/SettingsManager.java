@@ -11,15 +11,22 @@ public class SettingsManager {
         // Init settings file if it doesn't exist
         if (!settingsFile.exists()) {
             try {
-                settingsFile.createNewFile();
+                boolean fileCreated = settingsFile.createNewFile();
 
-                Properties prop = new Properties();
-                prop.put("botToken", "");
+                if (fileCreated) {
+                    Properties prop = new Properties();
+                    prop.put("botToken", "");
+                    prop.put("chatLinkChannelId", "");
+                    prop.put("discordMessagePrefix", "");
+                    prop.put("minecraftMessagePrefix", "");
 
-                BufferedWriter writer = new BufferedWriter(new FileWriter(settingsFile));
-                prop.store(writer, null);
-                writer.flush();
-                writer.close();
+                    BufferedWriter writer = new BufferedWriter(new FileWriter(settingsFile));
+                    prop.store(writer, null);
+                    writer.flush();
+                    writer.close();
+                } else {
+                    throw new IOException();
+                }
             } catch (IOException e) {
                 throw new RuntimeException("Could not create settings file for DiscordConnect!");
             }

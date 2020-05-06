@@ -11,12 +11,9 @@ import net.minecraft.text.LiteralText;
 import javax.security.auth.login.LoginException;
 
 public class Bot {
-    // TODO: Move this to settings
-    public String minecraftMessagePrefix = "[SMP]";
-    // TODO: Move this to settings
-    public String discordMessagePrefix = "[Discord]";
-    // TODO: Move this to settings
-    public String linkChannelId = "707009754723123253";
+    public String minecraftMessagePrefix = SettingsManager.loadSetting("minecraftMessagePrefix");
+    public String discordMessagePrefix = SettingsManager.loadSetting("discordMessagePrefix");
+    public String linkChannelId = SettingsManager.loadSetting("chatLinkChannelId");
     public boolean isBotActive;
     public static JDA bot;
     public TextChannel linkChannel;
