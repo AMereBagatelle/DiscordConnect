@@ -37,7 +37,7 @@ public class Bot {
     }
 
     public void sendMessageToMinecraft(String message) {
-        minecraftServerInstance.getPlayerManager().sendToAll(new LiteralText(message));
+        minecraftServerInstance.getPlayerManager().broadcastChatMessage(new LiteralText(message), true);
     }
 
     public void sendMessageToChatlink(String message) {

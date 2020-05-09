@@ -16,7 +16,7 @@ public class ChatlinkMessageListener extends ListenerAdapter {
 
         if (message.getChannel() == DiscordConnect.bot.linkChannel && DiscordConnect.bot.isChatLinkActive) {
             if (!content.startsWith(DiscordConnect.bot.minecraftMessagePrefix)) {
-                DiscordConnect.bot.sendMessageToMinecraft(DiscordConnect.bot.minecraftMessagePrefix + " " + content);
+                DiscordConnect.bot.sendMessageToMinecraft(DiscordConnect.bot.discordMessagePrefix + " <" + event.getAuthor().getName() + "> " + content);
             }
         }
     }
