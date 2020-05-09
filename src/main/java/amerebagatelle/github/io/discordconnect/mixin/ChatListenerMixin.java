@@ -13,8 +13,8 @@ public class ChatListenerMixin {
     @Inject(method = "onChatMessage", at = @At("RETURN"))
     public void onChatMessage(ChatMessageC2SPacket packet, CallbackInfo cbi) {
         String chatMessage = packet.getChatMessage();
-        if(!chatMessage.startsWith(DiscordConnect.bot.discordMessagePrefix)) {
-            DiscordConnect.bot.sendMessageToDiscord(DiscordConnect.bot.minecraftMessagePrefix + " " + chatMessage);
+        if (!chatMessage.startsWith(DiscordConnect.bot.discordMessagePrefix) && DiscordConnect.bot.isBotActive && DiscordConnect.bot.isChatLinkActive) {
+            DiscordConnect.bot.sendMessageToChatlink(DiscordConnect.bot.minecraftMessagePrefix + " " + chatMessage);
         }
     }
 }

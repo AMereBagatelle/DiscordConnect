@@ -15,6 +15,7 @@ public class SettingsManager {
 
                 if (fileCreated) {
                     Properties prop = new Properties();
+                    prop.put("chatLinkActive", "true");
                     prop.put("botToken", "");
                     prop.put("chatLinkChannelId", "");
                     prop.put("discordMessagePrefix", "");

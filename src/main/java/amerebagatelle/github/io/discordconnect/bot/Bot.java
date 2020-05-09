@@ -14,6 +14,7 @@ public class Bot {
     public String minecraftMessagePrefix = SettingsManager.loadSetting("minecraftMessagePrefix");
     public String discordMessagePrefix = SettingsManager.loadSetting("discordMessagePrefix");
     public String linkChannelId = SettingsManager.loadSetting("chatLinkChannelId");
+    public boolean isChatLinkActive = Boolean.parseBoolean(SettingsManager.loadSetting("chatLinkActive"));
     public boolean isBotActive;
     public static JDA bot;
     public TextChannel linkChannel;
@@ -37,8 +38,8 @@ public class Bot {
         minecraftServerInstance.getPlayerManager().sendToAll(new LiteralText(message));
     }
 
-    public void sendMessageToDiscord(String message) {
-        if(linkChannel != null) {
+    public void sendMessageToChatlink(String message) {
+        if (linkChannel != null) {
             linkChannel.sendMessage(message).queue();
         }
     }

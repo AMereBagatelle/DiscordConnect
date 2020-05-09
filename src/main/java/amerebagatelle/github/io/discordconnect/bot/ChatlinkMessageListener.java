@@ -14,7 +14,7 @@ public class ChatlinkMessageListener extends ListenerAdapter {
         Message message = event.getMessage();
         String content = message.getContentRaw();
 
-        if (message.getChannel() == DiscordConnect.bot.linkChannel) {
+        if (message.getChannel() == DiscordConnect.bot.linkChannel && DiscordConnect.bot.isChatLinkActive) {
             if (!content.startsWith(DiscordConnect.bot.minecraftMessagePrefix)) {
                 DiscordConnect.bot.sendMessageToMinecraft(DiscordConnect.bot.minecraftMessagePrefix + " " + content);
             }
