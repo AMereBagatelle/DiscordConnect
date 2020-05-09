@@ -5,7 +5,7 @@ import java.util.Properties;
 
 public class SettingsManager {
 
-    public static File settingsFile = new File("discordconnect.properties");
+    public static File settingsFile = new File("config/discordconnect.properties");
 
     public static void initSettings() {
         // Init settings file if it doesn't exist
@@ -20,6 +20,7 @@ public class SettingsManager {
                     prop.put("chatLinkChannelId", "");
                     prop.put("discordMessagePrefix", "");
                     prop.put("minecraftMessagePrefix", "");
+                    prop.put("commandPrefix", "/");
 
                     BufferedWriter writer = new BufferedWriter(new FileWriter(settingsFile));
                     prop.store(writer, null);

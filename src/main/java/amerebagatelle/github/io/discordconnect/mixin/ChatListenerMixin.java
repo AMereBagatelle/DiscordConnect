@@ -14,7 +14,7 @@ public class ChatListenerMixin {
     public void onChatMessage(ChatMessageC2SPacket packet, CallbackInfo cbi) {
         String chatMessage = packet.getChatMessage();
         if (!chatMessage.startsWith(DiscordConnect.bot.discordMessagePrefix) && DiscordConnect.bot.isBotActive && DiscordConnect.bot.isChatLinkActive) {
-            DiscordConnect.bot.sendMessageToChatlink(DiscordConnect.bot.minecraftMessagePrefix + " " + chatMessage);
+            DiscordConnect.bot.sendMessageToChatlink(DiscordConnect.bot.discordMessagePrefix + " " + chatMessage);
         }
     }
 }

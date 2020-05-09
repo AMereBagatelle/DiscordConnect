@@ -3,6 +3,7 @@ package amerebagatelle.github.io.discordconnect.bot;
 import amerebagatelle.github.io.discordconnect.settings.SettingsManager;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.MinecraftServer;
@@ -18,12 +19,13 @@ public class Bot {
     public boolean isBotActive;
     public static JDA bot;
     public TextChannel linkChannel;
-    private final MinecraftServer minecraftServerInstance;
+    public final MinecraftServer minecraftServerInstance;
 
     public Bot() {
         try {
             bot = JDABuilder.createDefault(SettingsManager.loadSetting("botToken")).build();
             bot.addEventListener(new ChatlinkMessageListener());
+            bot.addEventListener(new CommandMessageListener());
             bot.awaitReady();
             linkChannel = bot.getTextChannelById(linkChannelId);
             isBotActive = true;
@@ -42,5 +44,9 @@ public class Bot {
         if (linkChannel != null) {
             linkChannel.sendMessage(message).queue();
         }
+    }
+
+    public void sendDiscordMessage(String message, MessageChannel channel) {
+        channel.sendMessage(message).queue();
     }
 }
