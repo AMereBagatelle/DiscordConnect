@@ -10,6 +10,8 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.text.LiteralText;
 
 import javax.security.auth.login.LoginException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Bot {
     public String minecraftMessagePrefix = SettingsManager.loadSetting("minecraftMessagePrefix");
@@ -28,6 +30,8 @@ public class Bot {
             bot.addEventListener(new CommandMessageListener());
             bot.awaitReady();
             linkChannel = bot.getTextChannelById(linkChannelId);
+            LocalDateTime now = LocalDateTime.now();
+            linkChannel.getManager().setTopic("Server last started: " + now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))).queue();
             isBotActive = true;
         } catch (LoginException | InterruptedException e) {
             bot = null;
