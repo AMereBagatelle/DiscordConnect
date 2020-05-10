@@ -18,14 +18,14 @@ public class CommandMessageListener extends ListenerAdapter {
         if (message.startsWith(SettingsManager.loadSetting("commandPrefix"))) {
             if (event.getChannel() == DiscordConnect.bot.linkChannel) return;
 
-            if (message.contains("online")) {
+            if (message.contains("online") && Boolean.parseBoolean(SettingsManager.loadSetting("onlineCommand"))) {
                 MinecraftServer mcs = DiscordConnect.bot.minecraftServerInstance;
                 String[] players = mcs.getPlayerManager().getPlayerNames();
-                String finalMessage = "Currently online players:\n";
+                StringBuilder finalMessage = new StringBuilder("Currently online players:\n");
                 for (String player : players) {
-                    finalMessage = finalMessage + player + "\n";
+                    finalMessage.append(player).append("\n");
                 }
-                DiscordConnect.bot.sendDiscordMessage(finalMessage, event.getChannel());
+                DiscordConnect.bot.sendDiscordMessage(finalMessage.toString(), event.getChannel());
             }
         }
     }

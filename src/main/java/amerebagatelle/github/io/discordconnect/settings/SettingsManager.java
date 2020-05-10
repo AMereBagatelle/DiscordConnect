@@ -21,6 +21,7 @@ public class SettingsManager {
                     prop.put("discordMessagePrefix", "");
                     prop.put("minecraftMessagePrefix", "");
                     prop.put("commandPrefix", "/");
+                    prop.put("onlineCommand", "true");
 
                     BufferedWriter writer = new BufferedWriter(new FileWriter(settingsFile));
                     prop.store(writer, null);
