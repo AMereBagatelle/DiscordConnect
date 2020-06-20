@@ -15,7 +15,7 @@
   "icon": "assets/discordconnect/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
+    "server": [
       "amerebagatelle.github.io.discordconnect.DiscordConnect"
     ]
   },
