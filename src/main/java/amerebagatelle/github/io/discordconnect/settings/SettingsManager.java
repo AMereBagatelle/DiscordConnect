@@ -1,5 +1,7 @@
 package amerebagatelle.github.io.discordconnect.settings;
 
+import net.fabricmc.loader.api.FabricLoader;
+
 import java.io.*;
 import java.util.Properties;
 
@@ -14,7 +16,7 @@ public class SettingsManager {
             {"onlineCommand", "true"}
     };
 
-    public static File settingsFile = new File("config/discordconnect.properties");
+    public static File settingsFile = new File(FabricLoader.getInstance().getConfigDirectory() + "/discordconnect.properties");
 
     public static void initSettings() {
         // Init settings file
