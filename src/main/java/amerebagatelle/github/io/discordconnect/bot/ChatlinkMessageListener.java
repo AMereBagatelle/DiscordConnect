@@ -15,7 +15,7 @@ public class ChatlinkMessageListener extends ListenerAdapter {
         Message message = event.getMessage();
         String content = message.getContentRaw();
 
-        if (message.getChannel() == DiscordConnect.bot.linkChannel && DiscordConnect.bot.isChatLinkActive && !content.startsWith("[" + SettingsManager.loadSetting("serverType") + "]")) {
+        if (message.getChannel() == DiscordConnect.bot.linkChannel && DiscordConnect.bot.isChatLinkActive && !content.startsWith("[" + SettingsManager.loadSettingOrDefault("serverType", "SMP") + "]")) {
             DiscordConnect.bot.sendMessageToMinecraft("<" + event.getAuthor().getName() + "> " + content);
         }
     }

@@ -25,7 +25,7 @@ public class PlayerManagerMixin {
      */
     @Inject(method = "onPlayerConnect", at = @At("TAIL"))
     public void sendPlayerConnect(ClientConnection connection, ServerPlayerEntity player, CallbackInfo ci) {
-        DiscordConnect.bot.sendMessageToChatlink(MessageFormatting.removeFormattingFromString(String.format("[%s] %s joined the server", SettingsManager.loadSetting("serverType"), player.getDisplayName().asFormattedString())));
+        DiscordConnect.bot.sendMessageToChatlink(MessageFormatting.removeFormattingFromString(String.format("[%s] %s joined the server", SettingsManager.loadSettingOrDefault("serverType", "SMP"), player.getDisplayName().asFormattedString())));
     }
 
     /**
@@ -33,6 +33,6 @@ public class PlayerManagerMixin {
      */
     @Inject(method = "remove", at = @At("TAIL"))
     public void sendPlayerDisconnect(ServerPlayerEntity player, CallbackInfo ci) {
-        DiscordConnect.bot.sendMessageToChatlink(MessageFormatting.removeFormattingFromString(String.format("[%s] %s left the server", SettingsManager.loadSetting("serverType"), player.getDisplayName().asFormattedString())));
+        DiscordConnect.bot.sendMessageToChatlink(MessageFormatting.removeFormattingFromString(String.format("[%s] %s left the server", SettingsManager.loadSettingOrDefault("serverType", "SMP"), player.getDisplayName().asFormattedString())));
     }
 }

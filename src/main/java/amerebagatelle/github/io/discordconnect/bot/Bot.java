@@ -14,10 +14,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Bot {
-    public String minecraftMessagePrefix = SettingsManager.loadSetting("minecraftMessagePrefix");
-    public String discordMessagePrefix = SettingsManager.loadSetting("discordMessagePrefix");
-    public String linkChannelId = SettingsManager.loadSetting("chatLinkChannelId");
-    public boolean isChatLinkActive = Boolean.parseBoolean(SettingsManager.loadSetting("chatLinkActive"));
+    public String linkChannelId = SettingsManager.loadSettingOrDefault("chatLinkChannelId", "");
+    public boolean isChatLinkActive = Boolean.parseBoolean(SettingsManager.loadSettingOrDefault("chatLinkActive", "true"));
     public boolean isBotActive;
     public static JDA bot;
     public TextChannel linkChannel;
@@ -25,7 +23,7 @@ public class Bot {
 
     public Bot() {
         try {
-            bot = JDABuilder.createDefault(SettingsManager.loadSetting("botToken")).build();
+            bot = JDABuilder.createDefault(SettingsManager.loadSettingOrDefault("botToken", "")).build();
             bot.addEventListener(new ChatlinkMessageListener());
             bot.addEventListener(new CommandMessageListener());
             bot.awaitReady();

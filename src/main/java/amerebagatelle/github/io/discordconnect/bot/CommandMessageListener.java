@@ -15,10 +15,10 @@ public class CommandMessageListener extends ListenerAdapter {
         if (event.getAuthor().isBot()) return;
         String message = event.getMessage().getContentRaw();
 
-        if (message.startsWith(SettingsManager.loadSetting("commandPrefix"))) {
+        if (message.startsWith(SettingsManager.loadSettingOrDefault("commandPrefix", "/"))) {
             if (event.getChannel() == DiscordConnect.bot.linkChannel) return;
 
-            if (message.contains("online") && Boolean.parseBoolean(SettingsManager.loadSetting("onlineCommand"))) {
+            if (message.contains("online") && Boolean.parseBoolean(SettingsManager.loadSettingOrDefault("onlineCommand", "true"))) {
                 MinecraftServer mcs = DiscordConnect.bot.minecraftServerInstance;
                 String[] players = mcs.getPlayerManager().getPlayerNames();
                 StringBuilder finalMessage = new StringBuilder("Currently online players:\n");

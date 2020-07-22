@@ -18,6 +18,6 @@ public class ChatListenerMixin {
 
     @Inject(method = "onChatMessage", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/PlayerManager;broadcastChatMessage(Lnet/minecraft/text/Text;Z)V"))
     public void onChatMessage(ChatMessageC2SPacket packet, CallbackInfo ci) {
-        DiscordConnect.bot.sendMessageToChatlink(String.format("[%s] <%s> %s", SettingsManager.loadSetting("serverType"), player.getName().asFormattedString(), packet.getChatMessage()));
+        DiscordConnect.bot.sendMessageToChatlink(String.format("[%s] <%s> %s", SettingsManager.loadSettingOrDefault("serverType", "SMP"), player.getName().asFormattedString(), packet.getChatMessage()));
     }
 }
