@@ -41,7 +41,7 @@ public class Bot {
     }
 
     public void sendMessageToMinecraft(String message) {
-        minecraftServerInstance.getPlayerManager().broadcastChatMessage(new LiteralText(message), true);
+        minecraftServerInstance.getPlayerManager().broadcastChatMessage(new LiteralText("[DISCORD] " + message), false);
     }
 
     public void sendMessageToChatlink(String message) {

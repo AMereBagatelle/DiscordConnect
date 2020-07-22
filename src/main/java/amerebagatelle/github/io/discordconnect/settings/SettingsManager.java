@@ -18,8 +18,7 @@ public class SettingsManager {
                     prop.put("chatLinkActive", "true");
                     prop.put("botToken", "");
                     prop.put("chatLinkChannelId", "");
-                    prop.put("discordMessagePrefix", "");
-                    prop.put("minecraftMessagePrefix", "");
+                    prop.put("serverType", "SMP");
                     prop.put("commandPrefix", "/");
                     prop.put("onlineCommand", "true");
 
