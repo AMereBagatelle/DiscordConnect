@@ -10,6 +10,9 @@ import javax.annotation.Nonnull;
 
 public class CommandMessageListener extends ListenerAdapter {
 
+    /**
+     * Processes message from discord, for commands
+     */
     @Override
     public void onMessageReceived(@Nonnull MessageReceivedEvent event) {
         if (event.getAuthor().isBot()) return;

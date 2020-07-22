@@ -21,6 +21,9 @@ public class Bot {
     public TextChannel linkChannel;
     public final MinecraftServer minecraftServerInstance;
 
+    /**
+     * Start bot, initialize it all
+     */
     public Bot() {
         try {
             bot = JDABuilder.createDefault(SettingsManager.loadSettingOrDefault("botToken", "")).build();
@@ -38,16 +41,26 @@ public class Bot {
         minecraftServerInstance = (MinecraftServer) FabricLoader.getInstance().getGameInstance();
     }
 
+    /**
+     * @param message Message to send
+     */
     public void sendMessageToMinecraft(String message) {
         minecraftServerInstance.getPlayerManager().broadcastChatMessage(new LiteralText("[DISCORD] " + message), false);
     }
 
+    /**
+     * @param message Message to send
+     */
     public void sendMessageToChatlink(String message) {
         if (linkChannel != null) {
             linkChannel.sendMessage(message).queue();
         }
     }
 
+    /**
+     * @param message Message to send
+     * @param channel Channel to send it in
+     */
     public void sendDiscordMessage(String message, MessageChannel channel) {
         channel.sendMessage(message).queue();
     }

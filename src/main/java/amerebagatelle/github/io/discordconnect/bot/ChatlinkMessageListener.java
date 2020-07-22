@@ -10,6 +10,9 @@ import javax.annotation.Nonnull;
 
 public class ChatlinkMessageListener extends ListenerAdapter {
 
+    /**
+     * Processes message from discord for chat bridge
+     */
     @Override
     public void onMessageReceived(@Nonnull MessageReceivedEvent event) {
         Message message = event.getMessage();
