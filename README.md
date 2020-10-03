@@ -10,3 +10,6 @@ After configuring this, your bot should be ready for use!
 
 You will need to create your own bot for use with this mod, if you don't know how to do that follow the first step of this tutorial, and use the token that it points out.
 https://www.howtogeek.com/364225/how-to-make-your-own-discord-bot/
+
+### Support
+I have decided to stop supporting this mod. It will be on 1.15 forever.  If you would like to update it, feel free to fork it.
